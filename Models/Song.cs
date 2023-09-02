@@ -10,11 +10,11 @@ namespace TunaPiano.Models
         public string Title { get; set; }
         [Required]
         public int ArtistId { get; set; }
+        public Artist Artist { get; set; }
         [Required]
         public string Album { get; set; }
         [Required]
         public int Length { get; set; }
-        public List<SongGenre> SongGenres { get; } = new();
         public List<Genre> Genres { get; } = new();
     }
 }
