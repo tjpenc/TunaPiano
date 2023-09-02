@@ -33,7 +33,12 @@ public class TunaPianoDbContext : DbContext
         });
         modelBuilder.Entity<Song>().HasData(new Song[]
         {
-        new Song {Id = 1, Title = "Bing Bong", ArtistId = 1, Album = "Bio goes here", Length = 2}
+        new Song {Id = 1, Title = "Bing Bong", ArtistId = 1, Album = "Travels", Length = 2}
+        });
+        modelBuilder.Entity<SongGenre>().HasData(new SongGenre[]
+        {
+            new SongGenre {Id = 1, SongId = 1, GenreId = 1},
+            new SongGenre {Id = 2, SongId = 1, GenreId = 2}
         });
     }
 }
